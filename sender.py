@@ -20,6 +20,6 @@ with open(file_name, 'rb') as f:
         sock.sendto(f.read(1024), (UDP_IP, UDP_PORT))
         current_size += 1024
 
-sock.sendto(bytes("\nEND", "utf-8"), (UDP_IP, UDP_PORT))
+sock.sendto(bytes("END", "utf-8"), (UDP_IP, UDP_PORT))
 
 sock.close()
